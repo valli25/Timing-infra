@@ -41,7 +41,7 @@ resource "aws_security_group" "allow_postgress" {
   } 
 }
  */
-resource "aws_instance" "condition" {
+/* resource "aws_instance" "condition" {
   ami = "ami-00ca32bbc84273381"
   instance_type = var.isprod ? "t3.large " : "t2.micro"
 }
@@ -50,4 +50,15 @@ resource "aws_instance" "condition" {
  ami = "ami-00ca32bbc84273381"
  instance_type = var.env == "PROD" ? "t3.large" : "t2.micro"
 
+} */
+
+resource "aws_key_pair" "yeskey" {
+  key_name = "yes"
+  public_key = file("C:\\Users\\pravs\\yes.pub")
+}
+
+resource "aws_instance" "condition" {
+  key_name = aws_key_pair.yeskey.key_name
+ ami = "ami-00ca32bbc84273381"
+ instance_type = var.env == "PROD" ? "t3.large" : "t2.micro"
 }
