@@ -7,9 +7,10 @@ module "this" {
   public_subnet_cidr = var.public_subnet_cidr
   public_subnet_tags = var.common_tags
   public_route_table_tags = var.common_tags
-
-   eip_tags = var.common_tags
-   nat_gateway_tags = var.common_tags
+#  eip_tags = var.common_tags
+#  nat_gateway_tags = var.common_tags
+  tags = var.common_tags
+  eip_tags = var.common_tags
 
   private_subnet_cidr = var.private_subnet_cidr
   private_subnet_tags = var.common_tags
