@@ -16,8 +16,8 @@ module "this" {
   database_route_table_tags = var.common_tags
   database_subnet_tags = var.common_tags
 
-  eip_tags = var.common_tags
-  nat_gateway_tags = var.common_tags
+ eip_tags = var.common_tags
+ nat_gateway_tags = var.common_tags
  
 }
 
