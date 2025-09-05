@@ -86,3 +86,11 @@ variable "rds_security_group_name" {
 variable "rds_security_group_description" {
   default = "This security group is to attach timing RDS"
 }
+
+variable "security_group_name" {
+  type = string
+}
+variable "security_group_description" {
+  type = string
+  default = ""
+}
