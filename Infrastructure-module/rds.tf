@@ -8,6 +8,5 @@ module "rds" {
    rds_username = var.rds_username
    rds_security_group_id = local.rds_security_group_id
    db_subnet_group_name = local.db_subnet_group_name
-   rds_password_arn = var.rds_password_arn
-   
+   rds_password_arn = var.rds_password_arn 
 }
