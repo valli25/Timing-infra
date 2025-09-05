@@ -4,6 +4,4 @@ module "rds_security_group" {
   security_group_description = var.rds_security_group_description
   vpc_id = local.vpc_id
   tags = var.tags
-     
-
 }
