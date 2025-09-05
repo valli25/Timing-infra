@@ -31,6 +31,6 @@ variable "rds_password_arn" {
 }
 
 variable "tags" {
-  type = map(string) 
+  type = map 
   default = {}
 }
