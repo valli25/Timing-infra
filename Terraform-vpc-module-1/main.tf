@@ -139,7 +139,7 @@ resource "aws_vpc" "main" {
 
  resource "aws_db_subnet_group" "db_subnet_group" {
    name = var.project_name
-   subnet_ids = aws_subnet.database[*].id
+   subnet_ids = aws_subnet.database_subnet[*].id
 
    tags = var.db_subnet_group.tags
  }
