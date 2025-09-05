@@ -6,7 +6,7 @@ module "rds" {
    engine = var.engine
    instance_class = var.instance_class
    rds_username = var.rds_username
-   rds_security_group_id = local.rds_Security_group_id
+   rds_security_group_id = local.rds_security_group_id
    db_subnet_group_name = local.db_subnet_group_name
    rds_password_arn = var.rds_password_arn
    
