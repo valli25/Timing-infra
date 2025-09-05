@@ -9,5 +9,4 @@ module "rds" {
    db_subnet_group_name = local.db_subnet_group_name
    rds_password_arn = var.rds_password_arn
    tags = var.common_tags
-
 }
