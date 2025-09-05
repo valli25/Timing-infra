@@ -73,9 +73,12 @@ variable "instance_class" {
 
 variable "rds_username" {
   type = string
-  default = "admin"
+  default = "timingadmin"
 }
 
+variable "rds_password_arn" {
+  default = "arn:aws:secretsmanager:us-east-1:951280367986:secret:timing/rds/pass-b3r7VZ"
+}
 variable "rds_security_group_name" {
   default = "timing"
 }
