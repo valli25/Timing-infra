@@ -9,8 +9,8 @@ module "this" {
   public_route_table_tags = var.common_tags
 #  eip_tags = var.common_tags
 #  nat_gateway_tags = var.common_tags
-  tags = var.common_tags
-  eip_tags = var.common_tags
+  tags = merge(var.nat_gateway_tags)
+
 
   private_subnet_cidr = var.private_subnet_cidr
   private_subnet_tags = var.common_tags
@@ -19,6 +19,7 @@ module "this" {
   database_subnet_cidr = var.database_subnet_cidr
   database_route_table_tags = var.common_tags
   database_subnet_tags = var.common_tags
+  db_subnet_group_tags = var.common_tags
 
 }
 

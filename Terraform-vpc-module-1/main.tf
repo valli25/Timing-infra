@@ -136,3 +136,10 @@ resource "aws_vpc" "main" {
    subnet_id = element(aws_subnet.database_subnet[*].id,count.index)
    route_table_id = aws_route_table.database.id
  }
+
+ resource "aws_db_subnet_group" "db_subnet_group" {
+   name = var.project_name
+   subnet_ids = aws_subnet.database[*].id
+
+   tags = var.db_subnet_group.tags
+ }

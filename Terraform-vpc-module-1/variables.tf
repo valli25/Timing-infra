@@ -78,3 +78,9 @@ variable "database_route_table_tags" {
   type = map 
   default = {}
 }
+variable "db_subnet_group_tags" {
+  type = map 
+  default = {
+    
+  }
+}
