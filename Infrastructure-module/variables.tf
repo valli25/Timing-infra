@@ -89,8 +89,9 @@ variable "rds_security_group_description" {
 
 variable "security_group_name" {
   type = string
+  default = {}
 }
 variable "security_group_description" {
   type = string
-  default = ""
+  default = {}
 }
