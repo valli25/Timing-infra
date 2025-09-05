@@ -1,5 +1,5 @@
 module "rds" {
-  source = "git::https://github.com/valli25/Timing-infra.git?ref=v0.0.2"
+   source = "git::https://github.com/valli25/Timing-infra.git?ref=v0.0.2"
    allocated_storage = var.allocated_storage
    db_name = var.db_name  
    engine = var.engine
