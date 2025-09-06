@@ -83,15 +83,31 @@ variable "rds_security_group_name" {
   default = "timing"
 }
 
+variable "security_group_name" {
+  default = "timing"
+}
+variable "security_group_description" {
+  default = "this security group is to attach timing instances"
+}
 variable "rds_security_group_description" {
   default = "This security group is to attach timing RDS"
 }
 
-variable "security_group_name" {
-  type = string
-  default = "timing"
+variable "alb_ingress" {
+  default = {
+    http = {
+        from_port = 80
+        to_port = 80
+        protocol = "tcp"
+        description = "allow 80 port numbers"
+        cidr_blocks = ["0.0.0.0/0"]
+  },
+  https = {
+    from_port = 443
+    to_port = 443
+    protocol = "tcp"
+    description = "allow port 443 from internet"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 }
-variable "security_group_description" {
-  type = string
-  default = "this is timing sg group"
 }
