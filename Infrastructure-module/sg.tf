@@ -24,3 +24,30 @@ module "alb_security_group" {
       ) 
  ingress = var.alb_ingress
 }
+
+http_tcp_listeners = [
+{
+    port = 80
+    protocol = "HTTP"
+    target_group_index = 0
+}
+]
+http_listner_rules = [
+    {
+        http_listner_index = 0
+        priority = 5000
+        actions = [{
+            type = "redirect"
+            status_code = "HTTP_302"
+            host = "www.youtube.com"
+            path = "/watch"
+            query = "v=dqw4wgxcq"
+            protocol = "HTTPS"
+        }]
+        condition = [{
+            path_patterns = ["/onboarding", "/docs"]
+        }]
+    }
+]
+
+target_group_index

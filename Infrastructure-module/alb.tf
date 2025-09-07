@@ -5,5 +5,8 @@ module "alb" {
   vpc_id = local.vpc_id
   subnets = local.public_subnet_ids
   security_groups = local.alb_security_group_id
-  
+
+  http_tcp_listners = [
+    
+  ]
 }
